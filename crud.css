@@ -1,0 +1,185 @@
+/* ================================
+   MAIN CONTENT AREA
+================================ */
+.main-content {
+    padding: 2rem;
+    flex: 1;
+    background: #f0fdf4;
+    min-height: 100vh;
+}
+
+/* ================================
+   HEADER STYLE
+================================ */
+.header {
+    background: white;
+    padding: 1.2rem 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #064e3b;
+    font-weight: 700;
+}
+
+/* ================================
+   FORM WRAPPER
+================================ */
+.form-wrapper {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-wrapper h2 {
+    color: #065f46;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* ================================
+   FORM INPUT
+================================ */
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #064e3b;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #a7f3d0;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+form textarea {
+    resize: none;
+    height: 80px;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.2);
+}
+
+/* ============================
+   TEKS ERROR MERAH
+============================ */
+.text-error {
+    color: #dc2626;
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* ============================
+   BORDER MERAH OTOMATIS
+   INPUT TERKENA ERROR
+============================ */
+
+input:has(~ .text-error),
+select:has(~ .text-error),
+textarea:has(~ .text-error) {
+    border: 2px solid #ef4444 !important;
+    background: #fef2f2 !important;
+}
+
+/* ================================
+   BUTTON GROUP
+================================ */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ================================
+   BUTTON STYLE
+================================ */
+button {
+    padding: 10px 25px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #059669;
+}
+
+/* ================================
+   BUTTON BATAL
+================================ */
+.batal {
+    padding: 10px 25px;
+    background: #f3f4f6;
+    color: #065f46;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #d1fae5;
+    transition: background 0.3s;
+}
+
+.batal:hover {
+    background: #d1fae5;
+}
+
+/* ================================
+   ALT BUTTON AREA
+================================ */
+.btn-area {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* ================================
+   VALIDASI ERROR TEXT (MERAH)
+================================ */
+.error-text {
+    color: #b91c1c;       /* merah */
+    font-size: 13.5px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Warna border input yang error */
+.input-error {
+    border: 1.5px solid #ef4444 !important;
+    background: #fef2f2;
+}
+
+

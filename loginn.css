@@ -1,0 +1,125 @@
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ==== BACKGROUND ANIMASI (BUBBLE/SHAPE) ==== */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 25%, #a7f3d0 50%, #6ee7b7 75%, #34d399 100%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Semua gelembung */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  animation: float 20s infinite ease-in-out;
+  filter: blur(2px);
+}
+
+.shape-1 { width: 330px; height: 330px; top: -120px; left: -150px; }
+.shape-2 { width: 250px; height: 250px; bottom: -100px; right: -120px; }
+.shape-3 { width: 180px; height: 180px; top: 40%; left: 70%; }
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(40px, -40px); }
+}
+
+/* ==== LOGIN BOX ==== */
+.login-box {
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 150, 136, 0.2);
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.logo-area img {
+  width: 75px;
+  margin-bottom: 10px;
+}
+
+.logo-area h2 {
+  color: #047857;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Input */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 15px;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 5px rgba(16,185,129,0.4);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #059669;
+}
+
+/* Error */
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.footer a {
+  color: #047857;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

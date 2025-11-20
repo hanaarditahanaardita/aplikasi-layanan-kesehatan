@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0fdf4;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #10b981 0%, #059669 50%, #047857 100%);
+    padding: 2rem 0;
+    box-shadow: 4px 0 20px rgba(16, 185, 129, 0.3);
+    z-index: 1000;
+    animation: slideInLeft 0.6s ease;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-300px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.sidebar-logo {
+    text-align: left;
+    padding: 0 1rem 2rem 1.4rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu */
+.menu {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+.menu-item {
+    margin-bottom: 0.5rem;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease;
+    z-index: 0;
+}
+
+.menu-link:hover::before,
+.menu-link.active::before {
+    width: 100%;
+}
+
+.menu-link:hover,
+.menu-link.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon, .menu-text {
+    position: relative;
+    z-index: 1;
+}
+
+/* Logout Button */
+.logout-section {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 1rem;
+}
+
+.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1rem;
+    background: rgba(220, 38, 38, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.logout-link:hover {
+    background: rgba(220, 38, 38, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 3rem 4rem !important; /* padding ditambah */
+    min-height: 100vh;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header */
+.header {
+    background: white;
+    padding: 2rem 2.5rem !important; /* padding ditambah */
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(16, 185, 129, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    color: #065f46;
+}
+
+/* Table Container */
+.table-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 2.5rem !important; /* padding ditambah */
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.15);
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  color: #064e3b;
+}
+
+thead {
+  background: linear-gradient(90deg, #a7f3d0, #6ee7b7);
+  color: #064e3b;
+}
+
+thead th {
+  padding: 1.2rem 1rem !important; /* padding ditambah */
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 3px solid #10b981;
+  font-size: 1rem;
+}
+
+tbody tr {
+  background: #f0fdf4;
+  transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background: #dcfce7;
+}
+
+tbody tr:hover {
+  background: #bbf7d0;
+  transform: scale(1.015); /* lebih naik */
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
+}
+
+tbody td {
+  padding: 1.1rem 1rem !important; /* padding ditambah */
+  border-bottom: 1px solid #d1fae5;
+  font-size: 0.95rem;
+}
+
+/* Action Links */
+td a {
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+td a[href*="edit"] {
+  color: #059669;
+}
+
+td a[href*="hapus"] {
+  color: #dc2626;
+}
+
+/* Tambah Pasien */
+.add-link {
+  display: inline-block;
+  color: #047857;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: 6px 4px; /* padding ditambah */
+  transition: all 0.3s ease;
+}
+
+.add-link:hover {
+  color: #10b981;
+  transform: translateX(5px);
+}
+
+/* Search Form */
+.search-form {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-form input {
+    padding: 8px 12px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-search {
+    padding: 8px 15px;
+    background: #059669;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.btn-search:hover {
+    background: #0d966c;
+}
+
+.btn-search i {
+    font-size: 14px;
+}
